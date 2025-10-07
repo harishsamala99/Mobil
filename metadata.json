@@ -1,0 +1,5 @@
+{
+  "name": "MOBIL Gas Station",
+  "description": "An interactive, high-performance web interface for a Mobil gas station, inspired by Formula 1 racing. Features a comprehensive admin dashboard for managing fuel prices, inventory, and employees, alongside a public site with real-time updates, store availability, and service information.",
+  "requestFramePermissions": []
+}
