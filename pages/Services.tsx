@@ -2,7 +2,12 @@ import React from 'react';
 import { SERVICES_DATA } from '../constants';
 import type { Service } from '../types';
 
-const ServiceCard = ({ service }: { service: Service }) => (
+interface ServiceCardProps {
+  service: Service;
+  key?: React.Key;
+}
+
+const ServiceCard = ({ service }: ServiceCardProps) => (
   <div className="bg-secondary/30 dark:bg-secondary rounded-lg shadow-lg overflow-hidden flex flex-col group">
     <div className="overflow-hidden">
       <img src={service.image} alt={service.title} className="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500" />

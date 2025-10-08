@@ -1,42 +1,43 @@
 import type { NavLink, FuelPrice, Product, Employee, Service } from './types';
-import { Fuel, ShoppingBag, Car, EvCharger } from './components/Icons';
+import { Fuel, ShoppingBag, Car, AirPump, Atm } from './components/Icons';
 
 export const NAV_LINKS: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '/prices', label: 'Fuel Prices' },
+  { href: '/services', label: 'Services' },
+  { href: '/locator', label: 'Find a Station' },
   { href: '/about', label: 'About Us' },
   { href: '/contact', label: 'Contact' },
   { href: '/admin', label: 'Admin' },
 ];
 
 export const FUEL_PRICES: FuelPrice[] = [
-  { id: 'regular', name: 'Regular (87)', price: 3.19, icon: Fuel, lastUpdated: '2 hours ago' },
-  { id: 'premium', name: 'Premium (93)', price: 4.09, icon: Fuel, lastUpdated: '2 hours ago' },
-  { id: 'diesel', name: 'Diesel', price: 4.05, icon: Fuel, lastUpdated: '1 hour ago' },
+  { id: 'regular', name: 'Regular (87)', price: 3.89, icon: Fuel },
+  { id: 'super', name: 'Super (89)', price: 4.29, icon: Fuel },
+  { id: 'premium', name: 'Premium (93)', price: 4.59, icon: Fuel },
+  { id: 'diesel', name: 'Diesel', price: 4.25, icon: Fuel },
 ];
 
 export const PRODUCTS_DATA: Product[] = [
     { id: '1', name: 'Chips', category: 'Snacks', stock: 'In Stock', icon: ShoppingBag },
     { id: '2', name: 'Soda', category: 'Drinks', stock: 'In Stock', icon: ShoppingBag },
-    { id: '3', name: 'Sandwich', category: 'Food', stock: 'In Stock', icon: ShoppingBag },
+    { id: '3', name: 'Sandwich', category: 'Food', stock: 'Low Stock', icon: ShoppingBag },
     { id: '4', name: 'Coffee', category: 'Drinks', stock: 'In Stock', icon: ShoppingBag },
     { id: '5', name: 'Firewood', category: 'Supplies', stock: 'In Stock', icon: ShoppingBag },
-    { id: '6', name: 'Engine Oil', category: 'Car Supplies', stock: 'In Stock', icon: Car },
-    { id: '7', name: 'Candy Bar', category: 'Snacks', stock: 'In Stock', icon: ShoppingBag },
+    { id: '6', name: 'Engine Oil', category: 'Car Supplies', stock: 'Low Stock', icon: Car },
+    { id: '7', name: 'Candy Bar', category: 'Snacks', stock: 'Out of Stock', icon: ShoppingBag },
     { id: '8', name: 'Water Bottle', category: 'Drinks', stock: 'In Stock', icon: ShoppingBag },
 ];
 
 export const EMPLOYEES_DATA: Employee[] = [
-    { id: '1', name: 'JANGEL', role: 'MANAGER', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
-    { id: '2', name: 'LAHCEN', role: 'SUPERVISOR', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=janesmith` },
-    { id: '3', name: 'HARISH', role: 'CASHEIR', shift: 'Night', avatar: `https://i.pravatar.cc/150?u=mikejohnson` },
-    { id: '4', name: 'GEIDY', role: 'CASHIER', shift: 'Night', avatar: `https://i.pravatar.cc/150?u=emilywilliams` },
+    { id: '1', name: 'John Doe', role: 'Manager', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
+    { id: '2', name: 'Jane Smith', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=janesmith` },
+    { id: '3', name: 'Mike Johnson', role: 'Attendant', shift: 'Night', avatar: `https://i.pravatar.cc/150?u=mikejohnson` },
+    { id: '4', name: 'Emily Williams', role: 'Cashier', shift: 'Night', avatar: `https://i.pravatar.cc/150?u=emilywilliams` },
 ];
 
 // FIX: Add SERVICES_DATA to provide data for the services page.
 export const SERVICES_DATA: Service[] = [
-  
-  //"./picture/pic1.jpg"
   {
     id: 'convenience-store',
     title: '24/7 Convenience Store',
@@ -44,5 +45,18 @@ export const SERVICES_DATA: Service[] = [
     image: 'https://images.unsplash.com/photo-1582555193132-888960714b35?q=80&w=2070&auto=format&fit=crop',
     icon: ShoppingBag,
   },
- 
+  {
+    id: 'air-vacuum',
+    title: 'Tire Air & Vacuum',
+    description: 'Free air for your tires and powerful vacuums to keep the inside of your car clean.',
+    image: 'https://images.unsplash.com/photo-1629822421738-2dfa6109395f?q=80&w=2070&auto=format&fit=crop',
+    icon: AirPump,
+  },
+  {
+    id: 'atm',
+    title: 'ATM Services',
+    description: 'Need cash? We have an ATM available 24/7 for your convenience.',
+    image: 'https://images.unsplash.com/photo-1590632338982-835f0857752b?q=80&w=2070&auto=format&fit=crop',
+    icon: Atm,
+  },
 ];

@@ -4,7 +4,11 @@ import { useInventoryStore } from '../store/useInventoryStore';
 import { useEmployeeStore } from '../store/useEmployeeStore';
 import type { FuelPrice, Product, Employee } from '../types';
 
-const AdminLogin = ({ onLogin }) => (
+interface AdminLoginProps {
+  onLogin: () => void;
+}
+
+const AdminLogin = ({ onLogin }: AdminLoginProps) => (
     <div className="min-h-[60vh] flex items-center justify-center">
         <div className="max-w-md w-full bg-secondary/30 dark:bg-secondary p-8 rounded-lg shadow-lg">
             <h2 className="text-center font-heading text-3xl font-bold text-secondary dark:text-white uppercase mb-6">Admin Access</h2>
@@ -48,7 +52,7 @@ const FuelPriceManager = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     Object.entries(prices).forEach(([id, priceStr]) => {
-      const newPrice = parseFloat(priceStr);
+      const newPrice = parseFloat(priceStr as string);
       if (!isNaN(newPrice)) {
         updatePrice(id, newPrice);
       }

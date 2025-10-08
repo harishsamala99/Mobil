@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { NAV_LINKS } from '../constants';
@@ -16,9 +17,9 @@ export const Footer = () => {
               Fuel Your Journey. Power Your Performance. <br/> Proudly serving Subway.
             </p>
              <div className="flex space-x-4">
-                <a href="#" className="text-light/50 hover:text-accent transition-colors"><Twitter className="w-6 h-6" /></a>
-                <a href="#" className="text-light/50 hover:text-accent transition-colors"><Facebook className="w-6 h-6" /></a>
-                <a href="#" className="text-light/50 hover:text-accent transition-colors"><Instagram className="w-6 h-6" /></a>
+                <a href="https://twitter.com/mobil" target="_blank" rel="noopener noreferrer" className="text-light/50 hover:text-accent transition-colors"><Twitter className="w-6 h-6" /></a>
+                <a href="https://facebook.com/mobil" target="_blank" rel="noopener noreferrer" className="text-light/50 hover:text-accent transition-colors"><Facebook className="w-6 h-6" /></a>
+                <a href="https://instagram.com/mobil" target="_blank" rel="noopener noreferrer" className="text-light/50 hover:text-accent transition-colors"><Instagram className="w-6 h-6" /></a>
             </div>
           </div>
           <div>

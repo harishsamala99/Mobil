@@ -1,3 +1,5 @@
+import type React from 'react';
+
 export interface NavLink {
   href: string;
   label: string;
@@ -8,7 +10,6 @@ export interface FuelPrice {
   name: string;
   price: number;
   icon: React.ElementType;
-  lastUpdated: string;
 }
 
 export interface Product {

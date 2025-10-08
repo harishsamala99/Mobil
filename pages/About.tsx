@@ -1,7 +1,13 @@
 import React from 'react';
 import { useEmployeeStore } from '../store/useEmployeeStore';
+import type { Employee } from '../types';
 
-const TeamMemberCard = ({ member }) => (
+interface TeamMemberCardProps {
+  member: Employee;
+  key?: React.Key;
+}
+
+const TeamMemberCard = ({ member }: TeamMemberCardProps) => (
     <div className="bg-secondary/30 dark:bg-secondary p-6 rounded-lg text-center shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
         <img src={member.avatar} alt={member.name} className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-accent/50"/>
         <h3 className="text-xl font-bold text-secondary dark:text-white">{member.name}</h3>

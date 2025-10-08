@@ -5,6 +5,8 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import Home from './pages/Home';
 import FuelPrices from './pages/FuelPrices';
+import Services from './pages/Services';
+import StationLocator from './pages/StationLocator';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
@@ -38,6 +40,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/prices" element={<FuelPrices />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/locator" element={<StationLocator />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<Admin />} />

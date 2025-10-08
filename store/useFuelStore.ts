@@ -12,7 +12,7 @@ export const useFuelStore = create<FuelStoreState>((set) => ({
   updatePrice: (id, newPrice) =>
     set((state) => ({
       fuelPrices: state.fuelPrices.map((fuel) =>
-        fuel.id === id ? { ...fuel, price: newPrice, lastUpdated: 'Just now' } : fuel
+        fuel.id === id ? { ...fuel, price: newPrice } : fuel
       ),
     })),
 }));

@@ -2,14 +2,18 @@ import React from 'react';
 import { useFuelStore } from '../store/useFuelStore';
 import type { FuelPrice } from '../types';
 
-const FuelPriceCard = ({ item }: { item: FuelPrice }) => (
+interface FuelPriceCardProps {
+  item: FuelPrice;
+  key?: React.Key;
+}
+
+const FuelPriceCard = ({ item }: FuelPriceCardProps) => (
     <div className="bg-secondary/50 dark:bg-secondary rounded-lg shadow-lg p-6 flex flex-col items-center text-center border border-secondary/20 hover:border-accent/50 transform hover:scale-105 transition-all duration-300 group">
         <div className="bg-accent/10 p-4 rounded-full mb-4 transition-all group-hover:animate-glow">
             <item.icon className="w-10 h-10 text-accent" />
         </div>
         <h3 className="text-xl font-semibold text-secondary dark:text-white">{item.name}</h3>
         <p className="font-heading text-6xl font-bold text-accent my-3">${item.price.toFixed(2)}<span className="font-sans text-xl text-secondary/70 dark:text-light/50">/gal</span></p>
-        <p className="text-sm text-secondary/70 dark:text-light/50">Last updated: {item.lastUpdated}</p>
     </div>
 );
 
@@ -26,7 +30,7 @@ const FuelPrices = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-4 gap-8 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
         {fuelPrices.map((item) => (
           <FuelPriceCard key={item.id} item={item} />
         ))}

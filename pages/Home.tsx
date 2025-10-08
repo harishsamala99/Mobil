@@ -75,10 +75,10 @@ const SubwaySection = () => (
         ></div>
         <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm" aria-hidden="true"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <img src="gas/subway.png" alt="Subway Restaurant" className="w-64 mx-auto mb-6 invert brightness-0"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Subway_logo.svg/2560px-Subway_logo.svg.png" alt="Subway Logo" className="w-64 mx-auto mb-6 invert brightness-0"/>
             <h2 className="font-heading text-4xl font-bold uppercase">Fresh Fuel, Fresh Food</h2>
-            <p className="mt-2 text-lg text-light/80 max-w-2xl mx-auto mb-8">Grab a delicious, fresh sub from the Subway located right inside our station. Open 8 AM - 10 PM daily.</p>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-accent text-white font-bold rounded-md hover:bg-accent/90 transition-all text-lg shadow-lg transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-accent/50">
+            <p className="mt-2 text-lg text-light/80 max-w-2xl mx-auto mb-8">Grab a delicious, fresh sub from the Subway located right inside our station. Open 7 AM - 10 PM daily.</p>
+            <a href="https://www.subway.com/en-us/menunutrition" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-accent text-white font-bold rounded-md hover:bg-accent/90 transition-all text-lg shadow-lg transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-accent/50">
                 Order Ahead
             </a>
         </div>

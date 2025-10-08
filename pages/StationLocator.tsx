@@ -18,7 +18,12 @@ const ALL_STATIONS: Station[] = [
     { id: '4', name: 'MOBIL - Westside', address: '789 West St, Sometown, CT 06855', zip: '06855', status: 'Open 24 Hours' },
 ];
 
-const StationCard = ({ station }: { station: Station }) => (
+interface StationCardProps {
+  station: Station;
+  key?: React.Key;
+}
+
+const StationCard = ({ station }: StationCardProps) => (
     <div className="bg-secondary/30 dark:bg-secondary p-4 rounded-lg shadow-md transition-all duration-300 flex items-start space-x-4">
         <MapPin className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
         <div>
