@@ -12,28 +12,32 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const FUEL_PRICES: FuelPrice[] = [
-  { id: 'regular', name: 'Regular (87)', price: 3.89, icon: Fuel },
-  { id: 'super', name: 'Super (89)', price: 4.29, icon: Fuel },
-  { id: 'premium', name: 'Premium (93)', price: 4.59, icon: Fuel },
+  { id: 'regular', name: 'Regular (87)', price: 3.13, icon: Fuel },
+  { id: 'super', name: 'Super (89)', price: 3.89, icon: Fuel },
+  { id: 'premium', name: 'Premium (93)', price: 4.09, icon: Fuel },
   { id: 'diesel', name: 'Diesel', price: 4.25, icon: Fuel },
 ];
 
 export const PRODUCTS_DATA: Product[] = [
     { id: '1', name: 'Chips', category: 'Snacks', stock: 'In Stock', icon: ShoppingBag },
     { id: '2', name: 'Soda', category: 'Drinks', stock: 'In Stock', icon: ShoppingBag },
-    { id: '3', name: 'Sandwich', category: 'Food', stock: 'Low Stock', icon: ShoppingBag },
+    { id: '3', name: 'Sandwich', category: 'Food', stock: 'In Stock', icon: ShoppingBag },
     { id: '4', name: 'Coffee', category: 'Drinks', stock: 'In Stock', icon: ShoppingBag },
     { id: '5', name: 'Firewood', category: 'Supplies', stock: 'In Stock', icon: ShoppingBag },
-    { id: '6', name: 'Engine Oil', category: 'Car Supplies', stock: 'Low Stock', icon: Car },
-    { id: '7', name: 'Candy Bar', category: 'Snacks', stock: 'Out of Stock', icon: ShoppingBag },
+    { id: '6', name: 'Engine Oil', category: 'Car Supplies', stock: 'In Stock', icon: Car },
+    { id: '7', name: 'Candy Bar', category: 'Snacks', stock: 'In Stock', icon: ShoppingBag },
     { id: '8', name: 'Water Bottle', category: 'Drinks', stock: 'In Stock', icon: ShoppingBag },
 ];
 
 export const EMPLOYEES_DATA: Employee[] = [
-    { id: '1', name: 'John Doe', role: 'Manager', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
-    { id: '2', name: 'Jane Smith', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=janesmith` },
-    { id: '3', name: 'Mike Johnson', role: 'Attendant', shift: 'Night', avatar: `https://i.pravatar.cc/150?u=mikejohnson` },
-    { id: '4', name: 'Emily Williams', role: 'Cashier', shift: 'Night', avatar: `https://i.pravatar.cc/150?u=emilywilliams` },
+    { id: '1', name: 'ANGEL', role: 'Manager', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
+    { id: '2', name: 'LAHCEN', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=janesmith` },
+    { id: '3', name: 'HARISH', role: 'Cashier', shift: 'DAY & NIGHT', avatar: `https://i.pravatar.cc/150?u=mikejohnson` },
+    { id: '4', name: 'GEIDY', role: 'Cashier', shift: 'DAY', avatar: `https://i.pravatar.cc/150?u=emilywilliams` },
+    { id: '1', name: 'PHIL', role: 'Cashier', shift: 'NIGHT', avatar: `https://i.pravatar.cc/150?u=johndoe` },
+    { id: '1', name: 'JOSELINE', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
+    { id: '1', name: 'MARIA', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
+    { id: '1', name: 'SUBRATA', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
 ];
 
 // FIX: Add SERVICES_DATA to provide data for the services page.

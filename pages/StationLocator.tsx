@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { MapPin } from '../components/Icons';
 
 // Define a simple type for a station
@@ -40,6 +40,7 @@ const StationLocator = () => {
   const [results, setResults] = useState<Station[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
+  const resultsRef = useRef<HTMLDivElement>(null);
 
   const handleSearch = (e: React.FormEvent) => {
       e.preventDefault();
@@ -64,6 +65,13 @@ const StationLocator = () => {
           setIsLoading(false);
       }, 1000);
   };
+
+  useEffect(() => {
+    // When loading finishes after a search, scroll to the results.
+    if (!isLoading && hasSearched) {
+        resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [isLoading, hasSearched]);
   
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -100,7 +108,7 @@ const StationLocator = () => {
           />
         </div>
 
-        <div className="mt-8">
+        <div className="mt-8" ref={resultsRef}>
             {isLoading ? (
                 <div className="flex justify-center items-center p-8">
                     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
