@@ -8,9 +8,10 @@ const Hero = () => (
   <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center text-white overflow-hidden">
     <div 
       className="absolute inset-0 bg-cover bg-center"
-      style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop")', transform: 'scale(1.05)' }}
+      style={{ backgroundImage: 'url("https://res.cloudinary.com/disrdtslz/image/upload/v1760110011/station_ilrgfp.jpg")', transform: 'scale(1.05)' }}
       aria-hidden="true"
     ></div>
+    
     <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" aria-hidden="true"></div>
     <div className="relative z-10 text-center p-4">
       <h1 className="font-heading text-5xl md:text-7xl font-bold tracking-wider uppercase mb-4" style={{textShadow: '0 2px 10px rgba(226, 29, 56, 0.5)'}}>
@@ -67,23 +68,44 @@ const StoreAvailability = () => {
 };
 
 const SubwaySection = () => (
-    <section className="relative py-16 sm:py-24 text-white">
-        <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1604382354936-07c5d9983d34?q=80&w=2070&auto=format&fit=crop")' }}
-            aria-hidden="true"
-        ></div>
-        <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm" aria-hidden="true"></div>
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Subway_logo.svg/2560px-Subway_logo.svg.png" alt="Subway Logo" className="w-64 mx-auto mb-6 invert brightness-0"/>
-            <h2 className="font-heading text-4xl font-bold uppercase">Fresh Fuel, Fresh Food</h2>
-            <p className="mt-2 text-lg text-light/80 max-w-2xl mx-auto mb-8">Grab a delicious, fresh sub from the Subway located right inside our station. Open 7 AM - 10 PM daily.</p>
-            <a href="https://www.subway.com/en-us/menunutrition" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-accent text-white font-bold rounded-md hover:bg-accent/90 transition-all text-lg shadow-lg transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-accent/50">
-                Order Ahead
-            </a>
-        </div>
-    </section>
+  <section className="relative py-16 sm:py-24 text-white">
+    <div
+      className="absolute inset-0 bg-cover bg-center"
+      style={{
+        backgroundImage:
+          'url("https://images.unsplash.com/photo-1604382354936-07c5d9983d34?q=80&w=2070&auto=format&fit=crop")',
+      }}
+      aria-hidden="true"
+    ></div>
+    <div
+      className="absolute inset-0 bg-primary/80 backdrop-blur-sm"
+      aria-hidden="true"
+    ></div>
+    <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <img
+        src="https://res.cloudinary.com/disrdtslz/image/upload/v1760110555/subway_nbkigw.jpg"
+        alt="Subway Logo"
+        className="w-64 mx-auto mb-6 brightness-125"
+      />
+      <h2 className="font-heading text-4xl font-bold uppercase">
+        Fresh Fuel, Fresh Food
+      </h2>
+      <p className="mt-2 text-lg text-light/80 max-w-2xl mx-auto mb-8">
+        Grab a delicious, fresh sub from the Subway located right inside our
+        station. Open 9 AM - 10 PM daily.
+      </p>
+      <a
+        href="https://www.subway.com/en-us/menunutrition"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-8 py-4 bg-accent text-white font-bold rounded-md hover:bg-accent/90 transition-all text-lg shadow-lg transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-accent/50"
+      >
+        Order Ahead
+      </a>
+    </div>
+  </section>
 );
+
 
 const FacilitiesSection = () => {
     const [restroomStatus, setRestroomStatus] = useState<'Available' | 'Occupied' | 'Cleaning'>('Available');

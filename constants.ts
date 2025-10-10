@@ -12,9 +12,9 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const FUEL_PRICES: FuelPrice[] = [
-  { id: 'regular', name: 'Regular (87)', price: 3.13, icon: Fuel },
-  { id: 'super', name: 'Super (89)', price: 3.89, icon: Fuel },
-  { id: 'premium', name: 'Premium (93)', price: 4.09, icon: Fuel },
+  { id: 'regular', name: 'Regular (87)', price: 3.89, icon: Fuel },
+  { id: 'super', name: 'Super (89)', price: 4.29, icon: Fuel },
+  { id: 'premium', name: 'Premium (93)', price: 4.59, icon: Fuel },
   { id: 'diesel', name: 'Diesel', price: 4.25, icon: Fuel },
 ];
 
@@ -40,27 +40,28 @@ export const EMPLOYEES_DATA: Employee[] = [
     { id: '1', name: 'SUBRATA', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
 ];
 
+
 // FIX: Add SERVICES_DATA to provide data for the services page.
 export const SERVICES_DATA: Service[] = [
   {
     id: 'convenience-store',
     title: '24/7 Convenience Store',
     description: 'Stocked with all your road trip essentials, from snacks and drinks to coffee and car supplies.',
-    image: 'https://images.unsplash.com/photo-1582555193132-888960714b35?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760110811/gas1_ewwpvi.jpg',
     icon: ShoppingBag,
   },
   {
     id: 'air-vacuum',
     title: 'Tire Air & Vacuum',
     description: 'Free air for your tires and powerful vacuums to keep the inside of your car clean.',
-    image: 'https://images.unsplash.com/photo-1629822421738-2dfa6109395f?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://placehold.co/600x400/1B263B/E0E1DD?text=Tire+Air',
     icon: AirPump,
   },
   {
     id: 'atm',
     title: 'ATM Services',
     description: 'Need cash? We have an ATM available 24/7 for your convenience.',
-    image: 'https://images.unsplash.com/photo-1590632338982-835f0857752b?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://placehold.co/600x400/1B263B/E0E1DD?text=ATM',
     icon: Atm,
   },
 ];
