@@ -6,6 +6,7 @@ import { Fuel, ShoppingBag, Restroom, AirPump, Atm, Vacuum } from '../components
 
 const Hero = () => (
   <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center text-white overflow-hidden">
+    
     <div 
       className="absolute inset-0 bg-cover bg-center"
       style={{ backgroundImage: 'url("https://res.cloudinary.com/disrdtslz/image/upload/v1760110011/station_ilrgfp.jpg")', transform: 'scale(1.05)' }}
@@ -68,19 +69,14 @@ const StoreAvailability = () => {
 };
 
 const SubwaySection = () => (
-  <section className="relative py-16 sm:py-24 text-white">
-    <div
-      className="absolute inset-0 bg-cover bg-center"
-      style={{
-        backgroundImage:
-          'url("https://images.unsplash.com/photo-1604382354936-07c5d9983d34?q=80&w=2070&auto=format&fit=crop")',
-      }}
-      aria-hidden="true"
-    ></div>
-    <div
-      className="absolute inset-0 bg-primary/80 backdrop-blur-sm"
-      aria-hidden="true"
-    ></div>
+    
+      <section className="relative py-16 sm:py-24 text-white">
+        <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: 'url("https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")' }}
+            aria-hidden="true"
+        ></div>
+        <div className="absolute inset-0 bg-primary/80" aria-hidden="true"></div>
     <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <img
         src="https://res.cloudinary.com/disrdtslz/image/upload/v1760110555/subway_nbkigw.jpg"
