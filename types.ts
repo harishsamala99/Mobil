@@ -1,5 +1,3 @@
-import type React from 'react';
-
 export interface NavLink {
   href: string;
   label: string;
@@ -18,6 +16,7 @@ export interface Product {
   category: string;
   stock: 'In Stock' | 'Low Stock' | 'Out of Stock';
   icon: React.ElementType;
+  image: string;
 }
 
 export interface Employee {

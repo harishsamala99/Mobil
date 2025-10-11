@@ -19,10 +19,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => (
         </div>
         <h3 className="text-xl font-bold">{service.title}</h3>
       </div>
-      <p className="text-secondary/80 dark:text-light/60 mb-4 flex-grow">{service.description}</p>
-      <button className="mt-auto w-full px-6 py-3 bg-accent text-white font-bold rounded-md hover:bg-accent/80 transition-colors">
-        Learn More
-      </button>
+      <p className="text-secondary/80 dark:text-light/60 flex-grow">{service.description}</p>
     </div>
   </div>
 );

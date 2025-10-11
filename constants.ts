@@ -19,21 +19,24 @@ export const FUEL_PRICES: FuelPrice[] = [
 ];
 
 export const PRODUCTS_DATA: Product[] = [
-    { id: '1', name: 'Chips', category: 'Snacks', stock: 'In Stock', icon: ShoppingBag },
-    { id: '2', name: 'Soda', category: 'Drinks', stock: 'In Stock', icon: ShoppingBag },
-    { id: '3', name: 'Sandwich', category: 'Food', stock: 'In Stock', icon: ShoppingBag },
-    { id: '4', name: 'Coffee', category: 'Drinks', stock: 'In Stock', icon: ShoppingBag },
-    { id: '5', name: 'Firewood', category: 'Supplies', stock: 'In Stock', icon: ShoppingBag },
-    { id: '6', name: 'Engine Oil', category: 'Car Supplies', stock: 'In Stock', icon: Car },
-    { id: '7', name: 'Candy Bar', category: 'Snacks', stock: 'In Stock', icon: ShoppingBag },
-    { id: '8', name: 'Water Bottle', category: 'Drinks', stock: 'In Stock', icon: ShoppingBag },
+    { id: '1', name: 'Chips', category: 'Snacks', stock: 'In Stock', icon: ShoppingBag, image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760151704/chips_aw3tzd.jpg' },
+    { id: '2', name: 'Soda', category: 'Drinks', stock: 'In Stock', icon: ShoppingBag, image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760151974/drnks_zdxpb9.jpg' },
+    { id: '3', name: 'Sandwich', category: 'Food', stock: 'In Stock', icon: ShoppingBag, image: 'https://placehold.co/400x300/1B263B/E0E1DD?text=Sandwich' },
+    { id: '4', name: 'Coffee', category: 'Drinks', stock: 'In Stock', icon: ShoppingBag, image: 'https://placehold.co/400x300/1B263B/E0E1DD?text=Coffee' },
+    { id: '5', name: 'Firewood', category: 'Supplies', stock: 'In Stock', icon: ShoppingBag, image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760110810/gas2_gh2dbu.jpg' },
+    { id: '6', name: 'Engine Oil', category: 'Car Supplies', stock: 'In Stock', icon: Car, image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760151973/oil_dazypo.jpg' },
+    { id: '7', name: 'Candy Bar', category: 'Snacks', stock: 'In Stock', icon: ShoppingBag, image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760151976/candy_xeie6g.jpg' },
+    { id: '8', name: 'Water packs', category: 'Drinks', stock: 'In Stock', icon: ShoppingBag, image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760151976/water_cektip.jpg' },
+    { id: '9', name: 'Propane Gas', category: 'Supplies', stock: 'In Stock', icon: ShoppingBag, image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760151976/propane_ov1spy.jpg' },
+    { id: '10', name: 'Ice Bags', category: 'Supplies', stock: 'In Stock', icon: ShoppingBag, image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760151971/ice_k5fbmb.jpg' },
+    { id: '11', name: 'Hats', category: 'supplies', stock: 'In Stock', icon: ShoppingBag, image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760152293/hats_aucs8g.jpg' },
 ];
 
 export const EMPLOYEES_DATA: Employee[] = [
     { id: '1', name: 'ANGEL', role: 'Manager', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
-    { id: '2', name: 'LAHCEN', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=janesmith` },
-    { id: '3', name: 'HARISH', role: 'Cashier', shift: 'DAY & NIGHT', avatar: `https://i.pravatar.cc/150?u=mikejohnson` },
-    { id: '4', name: 'GEIDY', role: 'Cashier', shift: 'DAY', avatar: `https://i.pravatar.cc/150?u=emilywilliams` },
+    { id: '2', name: 'LAHCEN', role: 'Cashier', shift: 'Day', avatar: `https://res.cloudinary.com/disrdtslz/image/upload/v1760151164/lahcen_uz3lxp.jpg` },
+    { id: '3', name: 'HARISH', role: 'Cashier', shift: 'DAY & NIGHT', avatar: `https://res.cloudinary.com/disrdtslz/image/upload/v1760151271/harish_kgjjsd.jpg` },
+    { id: '4', name: 'GEIDY', role: 'Cashier', shift: 'DAY', avatar: `https://res.cloudinary.com/disrdtslz/image/upload/v1760151163/geidy_eyuar0.jpg` },
     { id: '1', name: 'PHIL', role: 'Cashier', shift: 'NIGHT', avatar: `https://i.pravatar.cc/150?u=johndoe` },
     { id: '1', name: 'JOSELINE', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
     { id: '1', name: 'MARIA', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
@@ -51,17 +54,26 @@ export const SERVICES_DATA: Service[] = [
     icon: ShoppingBag,
   },
   {
-    id: 'air-vacuum',
-    title: 'Tire Air & Vacuum',
+    id: 'AIR',
+    title: 'Tire Air ',
     description: 'Free air for your tires and powerful vacuums to keep the inside of your car clean.',
-    image: 'https://placehold.co/600x400/1B263B/E0E1DD?text=Tire+Air',
+    image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760150169/air_llrhjh.jpg',
     icon: AirPump,
   },
+
+   {
+    id: 'VACCUMN',
+    title: 'Tire Air ',
+    description: 'Free air for your tires and powerful vacuums to keep the inside of your car clean.',
+    image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760150168/vaccumn_byoqyl.jpg',
+    icon: AirPump,
+  },
+
   {
-    id: 'atm',
+    id: 'ATM',
     title: 'ATM Services',
     description: 'Need cash? We have an ATM available 24/7 for your convenience.',
-    image: 'https://placehold.co/600x400/1B263B/E0E1DD?text=ATM',
+    image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760150248/atm_cypnud.jpg',
     icon: Atm,
   },
 ];

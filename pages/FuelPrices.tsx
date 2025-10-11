@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useFuelStore } from '../store/useFuelStore';
 import type { FuelPrice } from '../types';
@@ -41,9 +42,9 @@ const FuelPrices = () => {
         <p className="text-secondary/80 dark:text-light/60 mb-6">
             Save on every gallon, earn points, and get exclusive rewards. Sign up today and start saving!
         </p>
-        <button className="px-8 py-3 bg-accent text-white font-bold rounded-md hover:bg-accent/80 transition-colors text-lg">
-            Learn More
-        </button>
+        <a href="https://rewards.exxon.com/welcome/login" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-3 bg-accent text-white font-bold rounded-md hover:bg-accent/80 transition-colors text-lg">
+            Join Now
+        </a>
       </div>
     </div>
   );

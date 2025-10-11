@@ -15,23 +15,33 @@ const Hero = () => (
     
     <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-transparent" aria-hidden="true"></div>
     <div className="relative z-10 text-center p-4">
-      <h1 className="font-heading text-5xl md:text-7xl font-bold tracking-wider uppercase mb-4" style={{textShadow: '0 2px 10px rgba(226, 29, 56, 0.5)'}}>
-        Fuel Your Journey.<br/> Power Your Performance.
+      <h1 className="font-heading text-5xl md:text-7xl font-bold tracking-wider uppercase mb-4" style={{ textShadow: '0 2px 10px rgba(226, 29, 56, 0.5)' }}>
+        Fuel Your Journey.<br /> Power Your Performance.
       </h1>
-      <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-light/80" style={{textShadow: '1px 1px 4px rgba(0,0,0,0.7)'}}>
+      <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-light/80" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
         Experience the pinnacle of fuel technology and track-side convenience.
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <NavLink to="/prices" className="px-8 py-4 bg-accent text-white font-bold rounded-md hover:bg-accent/90 transition-all text-lg shadow-lg transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-accent/50">
+        <NavLink
+          to="/prices"
+          className="px-8 py-4 bg-accent text-white font-bold rounded-md hover:bg-accent/90 transition-all text-lg shadow-lg transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-accent/50"
+        >
           Today's Fuel Prices
         </NavLink>
-         <NavLink to="/contact" className="px-8 py-4 bg-secondary/80 text-white font-bold rounded-md hover:bg-secondary transition-all text-lg shadow-lg transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-light/50">
-          Rewards & Contact
-        </NavLink>
+
+        <a
+          href="https://rewards.exxon.com/welcome/login"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-8 py-4 bg-secondary/80 text-white font-bold rounded-md hover:bg-secondary transition-all text-lg shadow-lg transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-light/50"
+        >
+          Join Mobil Rewards+
+        </a>
       </div>
     </div>
   </section>
 );
+
 
 const StoreAvailability = () => {
     const products = useInventoryStore((state) => state.products);
@@ -53,12 +63,14 @@ const StoreAvailability = () => {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
                 {products.map(item => (
-                    <div key={item.id} className="bg-secondary/30 dark:bg-secondary p-4 rounded-lg text-center shadow-lg transform hover:-translate-y-2 transition-transform">
-                        <item.icon className="w-10 h-10 text-accent mx-auto mb-3"/>
-                        <p className="font-semibold text-secondary dark:text-light mb-2">{item.name}</p>
-                        <div className="flex items-center justify-center space-x-2">
-                           <span className={`w-3 h-3 rounded-full ${getStockColor(item.stock)}`}></span>
-                           <span className="text-sm text-secondary/70 dark:text-light/60">{item.stock}</span>
+                    <div key={item.id} className="bg-secondary/30 dark:bg-secondary rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform overflow-hidden group">
+                        <img src={item.image} alt={item.name} className="w-full h-32 object-cover" />
+                        <div className="p-4 text-center">
+                            <p className="font-semibold text-secondary dark:text-light mb-2 truncate">{item.name}</p>
+                            <div className="flex items-center justify-center space-x-2">
+                               <span className={`w-3 h-3 rounded-full ${getStockColor(item.stock)}`}></span>
+                               <span className="text-sm text-secondary/70 dark:text-light/60">{item.stock}</span>
+                            </div>
                         </div>
                     </div>
                 ))}
