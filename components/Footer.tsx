@@ -3,6 +3,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { NAV_LINKS } from '../constants';
 import { Facebook, Instagram, Twitter } from './Icons';
+import { Logo } from './Logo';
 
 export const Footer = () => {
   return (
@@ -10,8 +11,8 @@ export const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
-             <NavLink to="/" className="flex items-center font-heading text-4xl font-bold text-light tracking-wider">
-                <span>M<span className="text-accent">O</span>BIL</span>
+             <NavLink to="/">
+                <Logo />
              </NavLink>
             <p className="text-sm text-secondary/70 dark:text-light/50">
               Fuel Your Journey. Power Your Performance. <br/> Proudly serving Subway.

@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { NAV_LINKS } from '../constants';
 import { useThemeStore } from '../store/useThemeStore';
 import { Sun, Moon, Menu, X } from './Icons';
+import { Logo } from './Logo';
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useThemeStore();
@@ -26,8 +27,8 @@ export const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-primary/80 dark:bg-primary/80 backdrop-blur-md border-b border-secondary/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <NavLink to="/" className="flex items-center font-heading text-4xl font-bold text-light tracking-wider">
-            <span>M<span className="text-accent">O</span>BIL</span>
+          <NavLink to="/">
+            <Logo />
           </NavLink>
           <nav className="hidden md:flex items-center space-x-8">
             {NAV_LINKS.map((link) => (
