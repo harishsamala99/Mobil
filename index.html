@@ -5,6 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230D1B2A%22%3E%3C/rect%3E%3Cpath fill=%22%23E0E1DD%22 d=%22M25 75V25h10v30l15-15l15 15V25h10v50H65l-15-15l-15 15H25z%22%3E%3C/path%3E%3Cpath fill=%22%23E21D38%22 d=%22M10 55h80v-10H10z%22%3E%3C/path%3E%3C/svg%3E" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MOBIL Gas Station</title>
+    <script>
+      // Prevents FOUC (flash of unstyled content) for dark/light theme
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">

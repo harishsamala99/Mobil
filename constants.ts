@@ -36,10 +36,10 @@ export const EMPLOYEES_DATA: Employee[] = [
     { id: '1', name: 'ANGEL', role: 'Manager', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
     { id: '2', name: 'LAHCEN', role: 'Cashier', shift: 'Day', avatar: `https://res.cloudinary.com/disrdtslz/image/upload/v1760151164/lahcen_uz3lxp.jpg` },
     { id: '3', name: 'HARISH', role: 'Cashier', shift: 'DAY & NIGHT', avatar: `https://res.cloudinary.com/disrdtslz/image/upload/v1760151271/harish_kgjjsd.jpg` },
-    { id: '4', name: 'GEIDY', role: 'Cashier', shift: 'DAY', avatar: `https://res.cloudinary.com/disrdtslz/image/upload/v1760151163/geidy_eyuar0.jpg` },
+    { id: '4', name: 'GEIDY', role: 'Cashier', shift: 'DAY', avatar: `https://res.cloudinary.com/disrdtslz/image/upload/v1760275078/g2_ywtf4c.jpg` },
     { id: '1', name: 'PHIL', role: 'Cashier', shift: 'NIGHT', avatar: `https://i.pravatar.cc/150?u=johndoe` },
     { id: '1', name: 'JOSELINE', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
-    { id: '1', name: 'MARIA', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
+    { id: '1', name: 'MARIA', role: 'Cashier', shift: 'Day', avatar: `https://res.cloudinary.com/disrdtslz/image/upload/v1760275078/maria_comon7.jpg` },
     { id: '1', name: 'SUBRATA', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
 ];
 
