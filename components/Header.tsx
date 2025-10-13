@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { NAV_LINKS } from '../constants';
 import { useThemeStore } from '../store/useThemeStore';
@@ -7,6 +7,15 @@ import { Logo } from './Logo';
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useThemeStore();
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
+
   return (
     <button
       onClick={toggleTheme}
@@ -20,8 +29,18 @@ const ThemeToggle = () => {
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+  const { theme, toggleTheme } = useThemeStore();
+
   const closeMenu = () => setIsMenuOpen(false);
+
+  // Keep dark class synced (important for mobile reloads)
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
 
   return (
     <header className="sticky top-0 z-50 w-full bg-primary/80 dark:bg-primary/80 backdrop-blur-md border-b border-secondary/50">
@@ -53,7 +72,9 @@ export const Header = () => {
             ))}
           </nav>
           <div className="flex items-center space-x-2">
-            <ThemeToggle />
+            <div className="hidden md:block">
+              <ThemeToggle />
+            </div>
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -68,26 +89,44 @@ export const Header = () => {
           </div>
         </div>
       </div>
+
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div id="mobile-menu" className="md:hidden absolute top-20 left-0 w-full bg-primary shadow-lg">
-          <nav className="flex flex-col p-4 space-y-2">
+        <div
+          id="mobile-menu"
+          className="md:hidden absolute top-20 left-0 w-full bg-light dark:bg-primary shadow-lg border-t border-secondary/20 transition-all duration-300"
+        >
+          <nav className="flex flex-col p-4">
             {NAV_LINKS.map((link) => (
               <NavLink
                 key={link.href}
                 to={link.href}
                 onClick={closeMenu}
                 className={({ isActive }) =>
-                  `px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  `px-3 py-3 rounded-md text-base font-medium transition-colors ${
                     isActive
                       ? 'bg-accent text-white'
-                      : 'text-light/80 hover:bg-secondary'
+                      : 'text-secondary dark:text-light/80 hover:bg-secondary/20 dark:hover:bg-secondary'
                   }`
                 }
               >
                 {link.label}
               </NavLink>
             ))}
+
+            <div className="border-t border-secondary/50 dark:border-secondary/20 my-4" />
+            <div className="px-3 py-2 flex items-center justify-between">
+              <span className="font-medium text-secondary dark:text-light/80">
+                Switch Theme
+              </span>
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-full text-secondary dark:text-light/70 hover:bg-secondary/20 dark:hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-accent"
+                aria-label="Toggle theme"
+              >
+                {theme === 'light' ? <Moon className="w-6 h-6" /> : <Sun className="w-6 h-6" />}
+              </button>
+            </div>
           </nav>
         </div>
       )}

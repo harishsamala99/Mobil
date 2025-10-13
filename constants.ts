@@ -40,7 +40,7 @@ export const EMPLOYEES_DATA: Employee[] = [
     { id: '1', name: 'PHIL', role: 'Cashier', shift: 'NIGHT', avatar: `https://i.pravatar.cc/150?u=johndoe` },
     { id: '1', name: 'JOSELINE', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
     { id: '1', name: 'MARIA', role: 'Cashier', shift: 'Day', avatar: `https://res.cloudinary.com/disrdtslz/image/upload/v1760275078/maria_comon7.jpg` },
-    { id: '1', name: 'SUBRATA', role: 'Cashier', shift: 'Day', avatar: `https://i.pravatar.cc/150?u=johndoe` },
+    { id: '1', name: 'SUBRATA', role: 'Cashier', shift: 'Day', avatar: `https://res.cloudinary.com/disrdtslz/image/upload/v1760365349/subrata_jv8uys.jpg` },
 ];
 
 
@@ -56,15 +56,15 @@ export const SERVICES_DATA: Service[] = [
   {
     id: 'AIR',
     title: 'Tire Air ',
-    description: 'Free air for your tires and powerful vacuums to keep the inside of your car clean.',
+    description: 'Free air for your tires.',
     image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760150169/air_llrhjh.jpg',
     icon: AirPump,
   },
 
    {
     id: 'VACCUMN',
-    title: 'Tire Air ',
-    description: 'Free air for your tires and powerful vacuums to keep the inside of your car clean.',
+    title: 'VACCUMN ',
+    description: 'Powerful vacuums to keep the inside of your car clean.',
     image: 'https://res.cloudinary.com/disrdtslz/image/upload/v1760150168/vaccumn_byoqyl.jpg',
     icon: AirPump,
   },
