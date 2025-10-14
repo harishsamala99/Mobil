@@ -4,9 +4,9 @@ import { useInventoryStore } from '../store/useInventoryStore';
 import { Fuel, ShoppingBag, Restroom, AirPump, Atm, Vacuum } from '../components/Icons';
 
 const heroImages = [
-    'https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     'https://res.cloudinary.com/disrdtslz/image/upload/v1760110011/station_ilrgfp.jpg',
-    'https://res.cloudinary.com/disrdtslz/image/upload/v1760110811/gas1_ewwpvi.jpg'
+    'https://res.cloudinary.com/disrdtslz/image/upload/v1760110811/gas1_ewwpvi.jpg',
+    'https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
 ];
 
 const Hero = () => {
@@ -15,7 +15,7 @@ const Hero = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-        }, 10000); // Change image every 5 seconds
+        }, 8000); // Change image every 8 seconds
 
         return () => clearInterval(timer);
     }, []);
@@ -71,15 +71,20 @@ const StoreAvailability = () => {
                 <h2 className="font-heading text-4xl font-bold uppercase text-secondary dark:text-light">Store Availability</h2>
                 <p className="mt-2 text-lg text-secondary/80 dark:text-light/60">Your pit stop for snacks, drinks, and essentials.</p>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
                 {products.map(item => (
-                    <div key={item.id} className="bg-secondary/30 dark:bg-secondary rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform overflow-hidden group">
-                        <img src={item.image} alt={item.name} className="w-full h-32 object-cover" />
-                        <div className="p-4 text-center">
-                            <p className="font-semibold text-secondary dark:text-light mb-2 truncate">{item.name}</p>
-                            <div className="flex items-center justify-center space-x-2">
-                               <span className={`w-3 h-3 rounded-full ${getStockColor(item.stock)}`}></span>
-                               <span className="text-sm text-secondary/70 dark:text-light/60">{item.stock}</span>
+                    <div key={item.id} className="relative group aspect-[3/4] rounded-lg shadow-lg overflow-hidden border-2 border-transparent hover:border-accent/80 transition-all duration-300">
+                        <img 
+                            src={item.image} 
+                            alt={item.name} 
+                            className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                        <div className="absolute bottom-0 left-0 p-4 text-white w-full">
+                            <h3 className="text-lg font-bold text-light truncate">{item.name}</h3>
+                            <div className="flex items-center space-x-2 mt-1">
+                                <span className={`w-3 h-3 rounded-full ${getStockColor(item.stock)}`}></span>
+                                <span className="text-sm text-light/80">{item.stock}</span>
                             </div>
                         </div>
                     </div>
@@ -89,6 +94,7 @@ const StoreAvailability = () => {
     </section>
     )
 };
+
 
 const SubwaySection = () => (
     
