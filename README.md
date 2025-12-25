@@ -1,7 +1,5 @@
 # MOBIL Gas Station 🚗⛽
 
-**An interactive, high-performance web interface for a Mobil gas station, inspired by Formula 1 racing.**
-
 > A small React + Vite + TypeScript SPA providing a public site (fuel prices, services, station locator) and an Admin dashboard to manage fuel prices, inventory, and employees.
 
 ---
@@ -72,29 +70,3 @@ npm run preview
 
 This makes it easy to swap to a backend later: replace store initializer and actions with API calls.
 
-## 💡 Notes for developers
-
-- Routing uses `HashRouter` (see `App.tsx`) to simplify static hosting without server-side routing setup.
-- Theme is driven by `useThemeStore` and injects a `dark` class on the `documentElement`.
-- Add or modify initial data in `constants.ts` to change what's shown by default.
-
-## 🤝 Contributing
-
-- Fork the repo and open a PR with clear changes and a short description.
-- Add tests and update types where applicable.
-
-## 📝 TODO / Ideas
-
-- Add integration with a backend (REST/GraphQL) to persist changes
-- Add form validation and unit tests
-- Add CI pipeline and automated deployments
-
-## 📞 Contact
-
-For questions or feature requests, open an issue in this repository.
-
----
-
-**License:** Add a license file (e.g., `LICENSE`) to make terms explicit.
-
-*Generated: based on project files (`metadata.json`, `package.json`, source files).*
